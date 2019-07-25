@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/usersdata?characterEncoding=utf8&useUnicode=true&useSSL=false&useUnicode=true&serverTimezone=UTC
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+server:
+  port: 8088
+logging:
+  config: classpath:logback.xml
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: classpath:com.spring.redis.entity
+
+redis:
+  host: 127.0.0.1
+  password: 123456
+  port: 6379
+  max-idle: 3000
+  max-total: 5000
+  max-wait-millis: 6000
